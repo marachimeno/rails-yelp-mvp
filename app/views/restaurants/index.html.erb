@@ -1,0 +1,16 @@
+<h1 class="pb-3">Restaurants</h1>
+<div class="mx-auto" style="width: 800px;">
+  <% @restaurants.each do |restaurant| %>
+    <div class="row py-3">
+      <div class="col-sm">
+        <div class="card text-center">
+          <div class="card-body rounded">
+            <h5 class="card-title font-weight-bold py-2"><%= restaurant.name %></h5>
+            <p class="card-text py-2"><%= restaurant.address %></p>
+            <%= link_to "More details", restaurant_path(restaurant), class: "btn btn-primary py-2" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
